@@ -1,0 +1,54 @@
+html {
+  scroll-padding-top: 100px;
+}
+body {
+  background:#C5BA8C;
+}
+
+p {
+  color: #1db543;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.contact {
+  margin: auto;
+  height: 150px;
+  width: 300px;
+}
+
+.contact p {
+  margin-top: 40px;
+  width: 150px;
+}
+
+.title {
+  position: relative;
+  color: grey;
+  top: -35px;
+  font-size: 12px;
+}
+
+.contact img {
+  margin-top: 25%;
+  float: right;
+}
+
+@media(max-width: 700px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}

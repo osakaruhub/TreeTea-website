@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- TODOs:add page contact -->
+<!--       use templates for header, bottom page -->
+<html lang="en">
+  <head>
+    <title>TreeTee</title>
+    <meta charset="UTF-8">
+    <html lang="de">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header_footer.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.hamburger-menu').click(function() {
+          $('.links').toggleClass('show-menu');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="links">
+          <li><a href="pages/products.html">Produkte</a></li>
+          <li><a href="pages/milestone.html">Meilenstein</a></li>
+          <li><a href="pages/contacts.html">Kontakt</a></li>
+        </ul>
+        <div class="links-web">
+          <a href="pages/products.html">Produkte</a>
+          <a href="pages/milestone.html">Meilen</a>
+          <a href="pages/contacts.html">Kontakt</a>
+        </div>
+        <div id="headerlogo">
+          <a href="index.html"><img src="photos/logo.png" width="100px" height="100px"></a>
+        </div>
+      <!--   <input type="range" min="0" max="1" step="1" id="slider"> -->
+      <!--     <script> -->
+      <!--         var toggle = document.getElementById('dark-mode-toggle'); -->
+      <!--         toggle.addEventListener('change', function() { -->
+      <!--         if (this.value == 1) { -->
+      <!--           document.body.classList.add('dark-mode'); -->
+      <!--         } else { -->
+      <!--           document.body.classList.remove('dark-mode'); -->
+      <!--         } -->
+      <!--       }); -->
+      <!--     </script> -->
+      <!-- </div> -->
+        <button class="searchButton" type="searchButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></button>
+      </nav>
+    </header>
+    <br>
+    <h1 style="font-family: arial; text-align:center;">TreeTea - Tea that saves Trees</h1>
+    <div class="container">
+      <div class="productList">
+        <div>
+          <a class="productButton" href="pages/products.html#TreeTea">
+          <img class="productImg" src="photos/dose.jpg">
+          </a>
+          <p>TreeTee</p>
+        </div>
+        <div>
+          <a class="productButton" href="pages/products.html#Merchandise">
+            <img class="productImg" src="photos/merchandise.webp" alt="Merchandise">
+            <div class="coming-soon">coming soon!</div>
+          </a>
+          <p>Merchandise</p>
+        </div>
+        <div>
+          <a class="productButton" href="pages/milestone.html">
+            <img class="productImg" src="photos/tea.png">
+          </a>
+          <p>Meilenstein</p>
+        </div>
+      </div>
+      <div class="points">
+        <h2 style="text-align: center;">Warum sollst du bei uns kaufen?</h2>
+        <div class="point">
+        <img src="photos/Zugriff.png">
+          <div class="point_text">
+            <h2>Zugriff</h2>
+            <p>Das Getränk ist in Läden erreichbar und für jeden zugreiflich. Man muss nicht seine Kreditkarten oder Paypal-Angaben an eine Organisation angeben.</p>
+          </div>
+        </div>
+        <div class="point">
+        <img src="photos/Transparenz.png">
+          <div class="point_text">
+            <h2>Transparenz</h2>
+            <p>Alle unsere Gewinne, Kosten und spenden an Klima-organisationen werden öffentlich sichtbar sein und so weit wie möglich transparent sein.</p>
+          </div>
+        </div>
+        <div class="point">
+        <img src="photos/Nutzen.png">
+          <div class="point_text">
+            <h2>Nutzen</h2>
+            <p>Man muss kein Klima-Kleber sein um unseren Produkt zu genießen. Auch </p>
+          </div>
+        </div>
+        <div class="point">
+        <img src="photos/Rezeptur.png">
+          <div class="point_text">
+            <h2>Rezeptur</h2>
+            <p>Die Rezepturen unser Produkte sind alle frei von Süßungsmitteln und sind vom höchster Qualitat gemacht</p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="contact">
+          <h4>Kontaktiere uns!</h4>
+          <a href="test">Tel: <i>#49/015906816556</i></a>
+          <br>
+          <a href="mail.to:stuewe.oskar@gmail.com">E-Mail: <i>stuewe.oskar@gmail.com</i></a>
+        </div>
+        <div class="pages">
+          <h4>Seiten</h4>
+          <p>Datenschutzerklärung</p>
+          <p>Impressum</p>
+          <p>AGB</p>
+        </div>
+      </footer>
+      <script>
+        // Get the container and the last point
+        var container = document.querySelector(".container");
+        var lastPoint = document.getElementById("last-point");
+
+        // Create an intersection observer to detect when the last point is in view
+        var observer = new IntersectionObserver(function(entries) {
+          if (entries[0].isIntersecting) {
+            // Remove the scroll-snap-type property from the container
+            container.style.scrollSnapType = "none";
+          } else {
+            // Restore the scroll-snap-type property to the container
+            container.style.scrollSnapType = "y mandatory";
+          }
+        });
+        // Observe the last point
+        observer.observe(lastPoint);
+      </script>
+    </body>
+  </html>

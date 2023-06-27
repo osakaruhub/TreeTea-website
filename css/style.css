@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background: #C5BA8C;
+}
+
+h1 {
+  scroll-snap-align: start;
+  margin-top: 100px;
+}
+
+.productList p {
+  float: left;
+}
+
+input {
+  width: 2%;
+}
+
+.productList {
+  background: hsl(48, 33%, 83%);
+  scroll-snap-align: start;
+  scroll-padding-top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 10%;
+}
+
+.productButton:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  filter: grayscale(0);
+}
+
+.productList div {
+  display: flex;
+  flex-direction: column;
+}
+
+.productList p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+
+.productButton {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  border: 1px solid navy;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  border-radius: 20%;
+  filter: grayscale(0.2);
+}
+
+.coming-soon {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 150%;
+  top: 50%;
+  left: 50%;
+  height: 30px;
+  background-color: red;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 22px;
+}
+
+.productImg {
+  width: 200px;
+  height: 200px;
+}
+
+/* mobile */
+@media(max-width: 700px) {
+  .productList {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #C5BA8C  
+  }
+  .productButton {
+    scroll-snap-align: center;
+  }
+  .point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+  }
+  .points img {
+    margin-left: 50vw;
+  }
+  .point_text {
+    margin-left: 50vw;
+  }
+}
+
+.container {
+  background: hsl(48, 30%, 83%);
+  display: flex; /* Use flexbox to create a row of boxes */
+  flex-direction: column; /* Make the boxes stack vertically */
+}
+
+.point {
+  background-color: #f1f1f1;
+  scroll-snap-align: center;
+  width: 50%;
+  height: 100vh;
+  padding: 15%;
+
+}
+
+.point_text {
+  justify-content: center;
+  display: grid;
+  text-align: center;
+}
+
+.point h2 {
+  display: inline-block;
+}
+
+.point p {
+  width: 250px;
+  overflow-wrap: break-word;
+}
+
+.points img {
+  width: 50%;
+  height: auto;
+  margin-left: 50vw;
+}
+
+/* #point-1 { */
+/*   background-color: #f1f1f1; */
+/* } */
+/**/
+/* #point-2 { */
+/*   background-color: #e6e6e6; */
+/* } */
+/**/
+/* #point-3 { */
+/*   background-color: #cccccc; */
+/* } */
+/**/
+/* #last-point { */
+/*   background-color: #b3b3b3; */
+/* } */
+.point p {
+  margin-top: 10px;
+} 
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 100px; 
+}

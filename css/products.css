@@ -1,0 +1,53 @@
+body {
+  background:) #C5BA8C;
+}
+h2 {
+  margin-left: 50px;
+  margin-top: 100px;
+}
+
+.tea {
+  scroll-snap-align: start;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 5%;
+}
+
+.tea div:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  filter: grayscale(0);
+}
+
+.tea div {
+  flex-direction: column;
+  vertical-align: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  border: 1px solid navy;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  border-radius: 2rem;
+  filter: grayscale(0.2);
+  width: 150px;
+  height: 150px; 
+
+}
+
+.tea p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+@media(max-width: 700px) {
+  .tea div  
+}
+

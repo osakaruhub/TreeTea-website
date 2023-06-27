@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Produkte</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/products.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
+	 <style>
+    .slider {
+      height: 100px;
+      width: 150px;
+      clip-path: ellipse(40% 11% at 50% 50%);
+    }
+
+	  </style>
+    <script>
+      const items = document.querySelectorAll('.item');
+      const arrows = document.querySelectorAll('.arrow');
+      let current = 0;
+
+      function init() {
+        items[current].classList.add('active');
+        arrows.forEach(arrow => {
+        arrow.addEventListener('click', () => {
+        const direction = arrow.classList.contains('right') ? 1 : -1;
+        current += direction;
+        if (current < 0) current = items.length - 1;
+        if (current >= items.length) current = 0;
+        update();
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="slider">
+    </div>
+  </body>
+</html>
